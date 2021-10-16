@@ -1,32 +1,69 @@
-\documentclass{resume} 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Anush Kumar V}
-\address{anushkumarv [at] gmail [dot] com}
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{charter}
+\usepackage[english]{babel}
+\usepackage[centering,includeheadfoot,margin=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{calc,blindtext}
+\usepackage{setspace}
+\setlength{\parindent}{0pt}
 
-\begin{rSection}{Education}
-    {\bf Ramaiah Institute Of Technology, Bengaluru} \hfill {\em August 2015 - July 2019}
-    \\ Bachelor of Engineering in Information Science and Technology. \hfill {Overall CGPA: 9.48}
-\end{rSection}
+\begin{document}
 
-\begin{rSection}{Publication}
-    {\bf Anush Kumar}{, Nihal V. Nayak, Aditya Chandra, and Mydhili K. Nair}{\bf Study on Unsupervised Statistical Machine Translation for Backtranslation}{\em Proceedings of Recent Advances in Natural Language Processing, Bugaria, 2019}
-\end{rSection}
+\begin{center}
+    \textbf{\huge ANUSH KUMAR V}
+    \\ Email : anushkumarv3 [at] gmail [dot] com
+\end{center}
 
-\begin{rSection}{Work Experience}
-    \begin{rSubsection}{J.P.Morgan Chanse & Co.}{Jan 2019 - present}{Software engineer}
-        \item Part of a team whichs builds software responsible for calculating credit risk towards clients that the firm trades with.
-        \item Primarily contributed to the distribution logic needed to process several trades within a resonable amount of time
-    \end{rSubsection}
+\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Education}}
+    \begin{itemize}
+    \item \textbf{Ramaiah Institute Of Technology}\emph{, Bengaluru, India} \hfill \textit{2015 - 2019}
+    \\ B.E in Information Science and Engineering
+    \\ \emph{CGPA : 9.48}
+\end{itemize}
 
-    \begin{rSubsection}{Stride.ai Inc}{Jun 2018 - Aug 2018}{NLP intern}
-        \item 
 
-\end{rSection}
+\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Work Experience}}
 
+  \begin{itemize}
+      \item \textbf{J.P.Morgan \& Chase}
+      \\ \emph{Software developer} \hfill \textit{Jan 2019 - present}  
+      \begin{itemize}
+          \item[o] Contributed to a new heuristic-based calculator. It takes into account market parameters and determines the risk associated with multiple clients the firm actively trades with.
+          \item[o] Refactored the legacy code responsible for the distribution logic of processing multiple clients at the same time. It helped in reducing the execution time by 4 hours.
+          \item[o] Contributed to migrating the codebase from python 2.7 to python 3.6
+      \end{itemize}
+      \item \textbf{Stride.ai Inc}
+      \\ \emph{Summer intern} \hfill \textit{Jun 2018 - Aug 2018}    
+      \begin{itemize}
+          \item[o] Developed a data scraping tool using python. It helped in automatically downloading publicly available documents from financial domains and extract key data points.
+          \item[o] Tagged data to identify the regions containing tabular data in PDF-based documents. The data helped in training a CNN-based model to extract tabular information. 
+      \end{itemize}
+  \end{itemize}
+  
+\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Publication}}
+\begin{itemize}
+    \item \textbf{Anush Kumar}, Nihal V. Nayak, Aditya Chandra and Mydhili K. Nair. \textbf{Study on Unsupervised Statistical Machine Translation for Backtranslation}. \textit{Proceedings of Recent Advances in Natural Language Processing (RANLP 2019),Varna, Bulgaria}. 
+\end{itemize}
+
+\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Projects}}
+\begin{itemize}
+    \item \textbf{Data Science with Julia} - \textit{Jupyter notebooks} \hfill \textit{2019}
+    \item \textbf{Tactile Auditory learning kit} \hfill \textit{2018}
+\end{itemize}
+
+\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Technical Talk}}
+\begin{itemize}
+    \item \textbf{Hands on Workshop on using  Git, Github and Node js} \hfill \textit{2018}
+    \\Conducted series of workshops to peers and juniors as part of developer student community
+\end{itemize}
+
+\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Awards and Certifications}}
+\begin{itemize}
+    \item \textbf{Smart India Hackathon}
+    \item \textbf{ITC info tech codeathon}
+    \item \textbf{NPTEL Design And Analysis Of Algorithms}
+\end{itemize}
+  
 \end{document}
-
-
-
-    
