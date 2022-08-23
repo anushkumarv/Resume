@@ -1,94 +1,267 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[T1]{fontenc}
-% \usepackage[latin1]{inputenc}
-\usepackage{charter}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage[centering,includefoot,margin=0.75cm]{geometry}
-\usepackage{xcolor}
-\usepackage{calc,blindtext}
-\usepackage{setspace}
-\setlength{\parindent}{0pt}
-\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
 \begin{center}
-    \textbf{\huge ANUSH KUMAR VENKATESH}
-    \\ Email : anushkumarv3 [at] gmail [dot] com
+    {\Huge \scshape \textbf{Anush Kumar Venkatesh}} \\ \vspace{1pt}
+    % 505 27th Way, Apt no 405, Boulder, CO 80305 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 720-834-8386 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{anushkumarv3@gmail.com}} ~ 
+    \href{https://linkedin.com/in//}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/anushkumarv}}  ~
+    \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/anushkumarv}}
+    \vspace{-8pt}
 \end{center}
-\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Education}}
-\vspace{-20pt}
-  \begin{itemize}
-      \item \textbf{University Of Colorado Boulder} \emph{, Boulder, USA}
-      \\ Master of Science in Computer Science - \emph{incoming student for fall 2022}
-  \end{itemize}
-  \begin{itemize}
-    \item \textbf{Ramaiah Institute Of Technology}\emph{, Bengaluru, India} \hfill \textit{Aug 2015 - Jul 2019}
-    \\ B.E in Information Science and Engineering \emph{CGPA : 9.48}
-  \end{itemize}
-{
-\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Work Experience}}
-  \begin{itemize}
-    %   \setlength\itemsep{0em}
-      \item \textbf{J.P.Morgan \& Chase} | \emph{Associate Software Engineer} \hfill \textit{Jan 2019 - July 2022}  
-      \begin{itemize}
-          \item Contributed to the development of SACCR (heuristic-based) and IMM (internal market model based) calculators which helps in calculating the \emph{counterparty credit risk} of multiple clients the firm trades with.
-          \item Primarily worked on refactoring the legacy code responsible for the distribution and parallel processing of multiple clients same time. It helped in reducing the execution time by 4 hours.
-        %   \item Contributed to a new heuristic-based calculator. It takes into account market parameters and determines the risk associated with multiple clients the firm actively trades with.
-        %   \item Refactored the legacy code responsible for the distribution logic of processing data from multiple clients at the same time. It helped in reducing the execution time by 4 hours.
-          \item Helped in migrating the codebase from python 2.7 to python 3.6
-      \end{itemize}
-      \item \textbf{Stride.ai Inc} | \emph{Summer Intern} \hfill \textit{Jun 2018 - Aug 2018}    
-      \begin{itemize}
-          \item Developed a data scraping tool using python. It helped in automatically downloading publicly available documents from financial domains and extract key data points.
-          \item Tagged data to identify the regions containing tabular data in PDF-based documents. The data helped in training a CNN-based model to extract tabular information. 
-      \end{itemize}
-  \end{itemize}
-}
-{
-\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Projects}}
-\begin{itemize}
-    \item \textbf{Tactile Auditory Learning Kit} \hfill \textit{Jan 2018 - Jul 2018}
-    \begin{itemize}
-        \item Implemented a CNN-based model to extract edges out of images and developed an algorithm to fit appropriate Braille characters along the edges of the image. It assisted in printing low-cost tactile graphics.
-        \item Developed a GUI to assist in converting a PDF-based textbook into its Braille equivalent. 
-        \item The project is currently deployed at \textbf{Mathru blind school}, \emph{Bengaluru}.
-    \end{itemize}
-    \item \textbf{Mathematical Reasoning using MathQA\footnote{\url{ https://math-qa.github.io/}} dataset} \hfill \textit{Aug 2021 - Mar 2022}
-     \begin{itemize}
-         \item Worked on building a transformer based Fixer module to automatically correct the incorrectly annotated datapoints from MathQA dataset using self-supervision.
-         \item The Fixer corrected 16\% of incorrectly annotated datapoints from training set (\href{https://github.com/anushkumarv/Language_models_explore_numeracy}{\textcolor{blue}{link}}) 
-     \end{itemize}   
-\end{itemize}
-}
-{
-\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Publication}}
-\begin{itemize}
-    \item \textbf{Anush Kumar}, Nihal V. Nayak, Aditya Chandra and Mydhili K. Nair. \textbf{Study on Unsupervised Statistical Machine Translation for Backtranslation}. \textit{Proceedings of Recent Advances in Natural Language Processing (RANLP 2019),Varna, Bulgaria}. (\href{https://aclanthology.org/R19-1068/}{\textcolor{blue}{link}}) 
-\end{itemize}
-}
-{
-\colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Technical Talk}}
-\begin{itemize}
-    \item \textbf{Workshop on Software Design Patterns} \hfill \textit{May 2022}
-    \\Was responsible for partial delivery of post-graduate (MSWE12) and under-graduate (IS62) \textit{Software Design Patterns} course at \textit{Ramaiah Institute Of Technology}. The workshop covered behavioral and creational patterns.
-\end{itemize}
-\begin{itemize}
-    \item \textbf{Hands on Workshop on using  Git, Github and Node js} \hfill \textit{May 2019}
-    \\Conducted a series of workshops to peers, junior year, and sophomore year students as part of the developer student community. It covered version control systems and node js.
-\end{itemize}
-}
-% {
-% \colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Awards and Certifications}}
-% \begin{itemize}
-%     \item \textbf{Smart India Hackathon} \textit{(National level)} \hfill \textit{Mar 2018}
-%     \\Inspiration award by \emph{Ministry of Social Justice and Empowerment, Government of India} for implementing \emph{Tactile Auditory Learning Kit} 
-%     \item \textbf{ITC info tech codeathon} \hfill \textit{May 2017}
-%     \\ Special jury award winners for developing an in-app feedback system using android, express-js, and mongoDB
-%     \item \textbf{NPTEL} Appeared among the top 5 percent in the completion of \textbf{Design And Analysis Of Algorithms} in a nationwide conducted test by \emph{Indian Institute of Technology, Madras}\hfill \textit{Mar 2017}
-% \end{itemize}
-% }
-% {
-% \colorbox{gray}{\makebox[\textwidth-2\fboxsep][l]{\bfseries\color{white} Skills}}
-% }
-  
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Colorado Boulder}{August 2022 -- July 2024}
+      {Master of Science in Computer Science}{Boulder, U.S.A}
+    \resumeSubheading
+      {Ramaiah Institute of Technology}{August 2015 -- July 2019}
+      {B.E in Information Science and Engineering, CGPA : 9.48}{Bengaluru, India}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages/ Frameworks}{: Python, Java, HTML/CSS, JavaScript, Julia, Pytorch, Oracle SQL, Mongo DB} \\
+     \textbf{Developer Tools}{: VS Code, Eclipse, Amazon Web Services (AWS), Android Studio, IntelliJ} \\
+     \textbf{Technologies}{: Linux, Jenkins, Git, GitHub, unittest, Apache Kafka} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {J.P.Morgan \& Chase}{January 2019 -- July 2022}
+      {Associate Software Engineer}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Collaborated to develop a heuristic and Monte Carlo Simulation-based Counterparty Credit Risk calculator in Python.}
+        \resumeItem{Optimized the distribution logic for processing several clients' data in parallel and reduced execution time by 4 hours.}
+        \resumeItem{Worked with cross-functional teams and laid out a design to use Kafka for ingesting data from several upstream sources.}
+        \resumeItem{Migrated one-third of the codebase from Python 2.7 to Python 3.6, ensuring backward compatibility.}
+        \resumeItem{Spearheaded a five-person team to train a Reinforcement Learning model as part of the AWS deep racer program internal to the firm. The group stood sixth, competing with over 100 participating teams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Stride.ai Inc}{June 2018 -- August 2018}
+      {Summer NLP Intern}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Devised a web scraping tool using Python and Selenium to download publicly available documents from financial domains. It reduced 15 weekly person-hours.  }
+        \resumeItem{Worked with the team to train a Semantic Role Labeling model for financial data. Led the effort to improve the F1 score from 87.5 to 91.67 by performing a feature ablation study.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+%-----------PUBLICATIONS--------------
+
+% \section{Publications}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%      \small {\item{
+%      \textbf{Anush Kumar}, Nihal V. Nayak, Aditya Chandra and Mydhili K. Nair. \textbf{Study on Unsupervised Statistical Machine Translation for Backtranslation}. \textit{Proceedings of Recent Advances in Natural Language Processing (RANLP 2019),Varna, Bulgaria}. (\href{https://aclanthology.org/R19-1068/}{\textcolor{blue}{paper}}) 
+%      }} 
+%  \end{itemize}
+
+% \vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Mathematical Reasoning using MathQA dataset} $|$ \emph{Pytorch, OpenNMT} $|$ \href{https://github.com/anushkumarv/Language_models_explore_numeracy}{\faGithub}}{March 2022}
+          \resumeItemListStart
+            \resumeItem{Built a Transformer based Fixer module to repair incorrectly annotated data points from the MathQA dataset using Self-Supervision. It corrected 16\% of inaccurately labeled data from the training set. }
+          \resumeItemListEnd
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{Soft Braille Desktop App} $|$ \emph{Python, PyQt} $|$ \href{https://github.com/ACprime96/SoftBraille}{\faGithub}}{July 2018}
+          \resumeItemListStart
+            \resumeItem{Created a desktop app to help teachers prepare learning material for visually impaired children from elementary school.}
+            \resumeItem{Introduced an innovative algorithm to represent edges of an image with Braille characters to mimic tactile graphics.}
+            \resumeItem{Developed a GUI component to assist in converting an English textbook to its Braille equivalent.}
+            \resumeItem{Recognized with Inspiration award by Ministry of Social Justice, Govt of India. }
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{Post-IT Android App} $|$ \emph{Java, Android Studio, Firebase} $|$ \href{https://github.com/anushkumarv/Post-It}{\faGithub}}{October 2017}
+          \resumeItemListStart
+            \resumeItem{Created an android application to keep track of upcoming events around a college campus.}
+            \resumeItem{Implemented a user authentication system that allows only systems administrators to post, update or delete events.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{El-Corteza Web App} $|$ \emph{JavaScript, Bootstrap, JSP, HTML/CSS} $|$ \href{https://github.com/anushkumarv/elCorteza}{\faGithub}}{June 2016}
+          \resumeItemListStart
+            \resumeItem{Built a mock e-commerce web application as part of java vocational training to accept food orders.}
+            \resumeItem{The application won the best project award, contesting against 50 participants. }
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Extracurricular}
+\vspace{-5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Workshop on Software Design Patterns}}{May 2022}
+          \resumeItemListStart
+            \resumeItem{Conducted a software design workshop covering behavioral and creational patterns for undergraduate and postgraduate students. }
+          \resumeItemListEnd
+        \vspace{-13pt}
+        \resumeProjectHeading
+          {\textbf{Workshop on Git, Github and Node js}}{May 2018}
+          \resumeItemListStart
+            \resumeItem{Facilitated a series of workshops for peers, junior year, and sophomore year students as part of the developer student community. It covered version control and node js. }
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
 \end{document}
