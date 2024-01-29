@@ -1,6 +1,8 @@
 %-------------------------
 % Resume in Latex
-% Author : Anush Kumar Venkatesh
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -42,11 +44,18 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
+\addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.4in}
+
+
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -115,9 +124,14 @@
 \begin{document}
 
 %----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
 \begin{center}
     {\Huge \scshape \textbf{Anush Kumar Venkatesh}} \\ \vspace{1pt}
+    % 505 27th Way, Apt no 405, Boulder, CO 80305 \\ \vspace{1pt}
     \small \raisebox{-0.1\height}\faPhone\ 720-843-8386 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{anushkumarv3@gmail.com}} ~ 
     \href{https://linkedin.com/in//}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/anushkumarv}}  ~
     \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/anushkumarv}}
@@ -135,11 +149,29 @@
       {B.E in Information Science and Engineering, CGPA : 9.48}{Bengaluru, India}
   \resumeSubHeadingListEnd
 
+%------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages/ Frameworks}{: Python, Java, HTML/CSS, JavaScript, Pytorch, GoLang, React js, Node js } \\
+     \textbf{Languages/ Frameworks}{: Python, Java, HTML/CSS, JavaScript, Pytorch, GoLang, React.js, Node js } \\
      \textbf{Developer Tools}{: VS Code, IntelliJ} \\
      \textbf{Technologies}{: Git, GitHub, Apache Kafka,  Oracle SQL, Mongo DB, Neo4j, AWS, Kubernetes} \\
     }}
@@ -155,8 +187,9 @@
       {The Mathworks, Inc}{May 2023 -- August 2023}
       {Software Engineer intern}{Natick, U.S}
       \resumeItemListStart
-        \resumeItem{Coordinated with UX teams to gather end-user feedback and redesigned existing UI of a toolbox in matlab addressing 4 key pain points.}
-        \resumeItem{Implemented a versatile front-end application employing modern JavaScript standards, capable of supporting multiple layouts and dynamically rendering diverse widgets based on payload received from backend. It facilitated easy adaptation and customization of UI by multiple teams within the firm.}
+        \resumeItem{Coordinated with UX teams to redesign an existing MATLAB toolbox UI, addressing 4 key end-user pain points.}
+        \resumeItem{Implemented a versatile front-end application using modern JavaScript standards, supporting and dynamically rendering 20+ custom UI widgets based on backend data. }
+        \resumeItem{Facilitated easy adaptation and customization of the developed UI code-base for over 5 internal teams.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -164,52 +197,117 @@
       {Associate Software Engineer}{Bengaluru, India}
       \resumeItemListStart
         \resumeItem{Collaborated with cross-functional teams to develop a heuristic and simulation-based credit risk calculator in Python. This tool efficiently computed the risk associated with over 3000 clients the firm trades on a day-to-day basis. }
-        \resumeItem{Optimized the distribution logic for processing different clients' data in parallel and reduced execution time by 4 hours.}
-        \resumeItem{Drove the effort to integrate Kafka, replacing Oracle DB, into an existing application to consume data from 20+ upstream sources. It further aided in reducing licensing cost associated wit Oracle DB usage.}
-        \resumeItem{Migrated one-third of the codebase from Python 2.7 to Python 3.6, ensuring long term support backward compatibility.}
+        \resumeItem{Optimized the distribution logic for processing data in parallel and reduced execution time by 4 hours.}
+        \resumeItem{Drove the effort to integrate Kafka, replacing Oracle DB, into an existing application to consume data from 20+ upstream sources. It further aided in reducing licensing cost associated wit Oracle DB usage by 40\%.}
+        % \resumeItem{Contributed in refactoring existing codebase to  Migrated one-third of the codebase from Python 2.7 to Python 3.6, ensuring long term support and backward compatibility.}
+        % \resumeItem{Refactored 35\% of modules to support execution in both Python 2.7 and Python 3.6 to achieve cross-version compatibility.}
+        \resumeItem{Migrated 35\% of existing codebase from Python 2.6 to Python 3.6 to ensure long term support.}
         \resumeItem{Spearheaded a five-person team to train a Reinforcement Learning model as part of the AWS deep racer program internal to the firm. The group stood sixth, competing with over 100 participating teams.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Stride.ai Inc}{June 2018 -- August 2018}
-      {Summer NLP Intern}{Bengaluru, India}
-      \resumeItemListStart
-        \resumeItem{Devised a web scraping tool using python and selenium to efficiently and automatically download publicly available documents for annotations, leading to a 15-hour reduction in weekly manual effort.}
-        \resumeItem{Worked with the team to train a Semantic Role Labeling model for financial data. Led the effort to improve the F1 score from 87.5 to 91.67 by performing a feature ablation study.}
-    \resumeItemListEnd
+    % \resumeSubheading
+    %   {Stride.ai Inc}{June 2018 -- August 2018}
+    %   {Summer NLP Intern}{Bengaluru, India}
+    %   \resumeItemListStart
+    %     \resumeItem{Devised a web scraping tool using python and selenium to efficiently and automatically download publicly available documents for annotations, leading to a 15-hour reduction in weekly manual effort.}
+    %     \resumeItem{Worked with the team to train a Semantic Role Labeling model for financial data. Led the effort to improve the F1 score from 87.5 to 91.67 by performing a feature ablation study.}
+    % \resumeItemListEnd
     
   \resumeSubHeadingListEnd
 \vspace{-16pt}
 
 
+%-----------PUBLICATIONS--------------
+
+% \section{Publications}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%      \small {\item{
+%      \textbf{Anush Kumar}, Nihal V. Nayak, Aditya Chandra and Mydhili K. Nair. \textbf{Study on Unsupervised Statistical Machine Translation for Backtranslation}. \textit{Proceedings of Recent Advances in Natural Language Processing (RANLP 2019),Varna, Bulgaria}. (\href{https://aclanthology.org/R19-1068/}{\textcolor{black}{paper}}) 
+%      }} 
+%  \end{itemize}
+
+% \vspace{-16pt}
+
 %-----------PROJECTS-----------
 \section{Projects}
     \vspace{-5pt}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Connected Papers on Arxiv Web App} $|$  \textit{GoLang, React js, Neo4j, Kubernetes, GCP} $|$ \href{https://github.com/ArxivInsanity}{\faGithub}}{April 2023}
-          \resumeItemListStart
-            \resumeItem{Collaborated with a team of 6 to design the architecture of a web app and display the citation network for a given research paper in arxiv to the user. Laid out the CI/CD pipeline through GitHub actions and Terraform.}
-            \resumeItem{Led the development of backend service in GoLang to parse over 10000 papers in semantic scholar web API and builds a graph of all related influential papers and stores the result in Neo4j. }
-          \resumeItemListEnd
-      \vspace{-16pt}    
-      \resumeProjectHeading
-          {\textbf{Mathematical Reasoning using MathQA dataset} $|$ \emph{Pytorch, OpenNMT} $|$ \href{https://github.com/anushkumarv/Language_models_explore_numeracy}{\faGithub}}{March 2022}
-          \resumeItemListStart
-            \resumeItem{Built a Transformer based Fixer module to auto-correct incorrectly annotated data points from the MathQA dataset using Self-Supervision. It corrected 16\% of inaccurately labeled data from the training set. }
-            \resumeItem{Retraining the mathematical reasoning model upon augmenting the corrected data points further improved the overall accuracy by 2\%. }
+        \resumeProjectHeading
+            {\textbf{HyperParameter Tuning as a Service} $|$ \textit{Python, React.js, Kafka, MongoDB, Kubernetes, GCP} $|$ \href{https://github.com/HyperParameter-Tuning-as-a-Service?view_as=public}{\faGithub}}{December 2023}
+            \resumeItemListStart
+                % \resumeItem{Built an application composed of 4 microservices that can perform Grid search to finetune an exisitng ML model across several hyperparameters in parallel.}
+                % \resumeItem{Built an application composed of 4 microservices to perform parallelized grid search for hyperparameter tuning of existing machine learning models.}
+                \resumeItem{Built a microservice-based web app for parallelized hyper-parameter tuning of ML models on the cloud for custom user datasets, resulting in a 30\% reduction in training time compared to a single machine. }
+                % \resumeItem{Configured Kafka on Confluent Cloud to ensure efficient message passing between services.}
+                \resumeItem{Developed the backend to process incoming job requests, showcase ongoing and historically completed jobs for users. Configured Kafka to ensure efficient message passing between services.}
+                \resumeItem{Wrote deployment scripts for launching the application on Google Kubernetes Engine. }
             \resumeItemListEnd
-      \vspace{-16pt}  
-      \resumeProjectHeading
-          {\textbf{Soft Braille Desktop App} $|$ \emph{Python, PyQt} $|$ \href{https://github.com/ACprime96/SoftBraille}{\faGithub}}{July 2018}
-          \resumeItemListStart
-            \resumeItem{Created a desktop app to assist teacher in converting an English textbook to its Braille equivalent.}
-            \resumeItem{Introduced an innovative algorithm to represent edges of an image with Braille characters to mimic tactile graphics.}
-            \resumeItem{Recognized with Inspiration award by Ministry of Social Justice, Govt of India. }
-          \resumeItemListEnd
+        \vspace{-16pt}
+        \resumeProjectHeading
+            {\textbf{Connected Papers on Arxiv Web App} $|$  \textit{GoLang, React.js, Neo4j, Kubernetes, GCP} $|$ \href{https://github.com/ArxivInsanity}{\faGithub}}{April 2023}
+            \resumeItemListStart
+                \resumeItem{Collaborated with a team of 6 to design the architecture of a web app and display the citation network for a given research paper in arXiv to the user. It aided in 20\% quicker and easier exploration of connected research papers.}
+                % \resumeItem{Laid out the CI/CD pipeline through GitHub actions and Terraform.}
+                \resumeItem{Led the development of backend service in GoLang to parse over 10000 research papers and builds a graph of all related influential papers and stores the result in Neo4j. }
+            \resumeItemListEnd
+        \vspace{-16pt}    
+        % \resumeProjectHeading
+        %     {\textbf{Machine Translation for Low-Resource Languages} $|$ \emph{Pytorch} $|$ }{May 2019}
+        %     \resumeItemListStart
+        %         \resumeItem{Devised a novel data augmentation approach that used an unsupervised statistical machine translation model to produce additional synthetic parallel corpus in the cases of low-resource languages.}
+        %         \resumeItem{The additional data improved the BLEU scores for supervised neural machine translation by 3 points on the English-Russian low-resource language pair.}
+        %         \resumeItem{Published the findings at Recent Advances in Natural Language Processing, 2019, where I first authored.}
+        %     \resumeItemListEnd
+        % \vspace{-16pt}
+        % \resumeProjectHeading
+        %     {\textbf{Mathematical Reasoning using MathQA dataset} $|$ \emph{Pytorch, OpenNMT} $|$ \href{https://github.com/anushkumarv/Language_models_explore_numeracy}{\faGithub}}{March 2022}
+        %     \resumeItemListStart
+        %         \resumeItem{Built a Transformer based Fixer module to auto-correct incorrectly annotated data points from the MathQA dataset using Self-Supervision. It corrected 16\% of inaccurately labeled data from the training set. }
+        %         \resumeItem{Retraining the mathematical reasoning model upon augmenting the corrected data points further improved the overall accuracy by 2\%. }
+        %     \resumeItemListEnd
+        % \vspace{-16pt}  
+        \resumeProjectHeading
+            {\textbf{Soft-Braille Desktop App} $|$ \emph{Python, PyQt} $|$ \href{https://github.com/ACprime96/SoftBraille}{\faGithub}}{July 2018}
+            \resumeItemListStart
+                % \resumeItem{Created a desktop app to assist teachers in automatically translating an English textbook to its Braille equivalent.}
+                \resumeItem{Created a desktop app to assist teachers in automatically translating an English textbook to its Braille equivalent, helping in an 80\% conversion of primary school materials.}
+                \resumeItem{Introduced an innovative algorithm to represent edges of an image with Braille characters to mimic tactile graphics.}
+                \resumeItem{Recognized with Inspiration award by Ministry of Social Justice, Govt of India. }
+            \resumeItemListEnd 
+        \vspace{-16pt}
+        % \resumeProjectHeading
+        %     {\textbf{Post-IT Android App} $|$ \emph{Java, Android Studio, Firebase} $|$ \href{https://github.com/anushkumarv/Post-It}{\faGithub}}{October 2017}
+        %     \resumeItemListStart
+        %         \resumeItem{Created an android application to keep track of upcoming events around a college campus.}
+        %         \resumeItem{Implemented a user authentication system that allows only systems administrators to post, update or delete events.}
+        %     \resumeItemListEnd
+        % \vspace{-16pt}
+        \resumeProjectHeading
+            {\textbf{El-Corteza Web App} $|$ \emph{JavaScript, Bootstrap, JSP, HTML/CSS} $|$ \href{https://github.com/anushkumarv/elCorteza}{\faGithub}}{June 2016}
+            \resumeItemListStart
+                \resumeItem{Built a mock e-commerce web application as part of java vocational training to accept food orders.}
+                \resumeItem{Secured the best project award, contesting against 50 participants. }
+            \resumeItemListEnd
     \resumeSubHeadingListEnd
-\vspace{-15pt}
+\vspace{1pt}
 
+
+%-----------INVOLVEMENT---------------
+% \section{Extracurricular}
+% \vspace{-5pt}
+%     \resumeSubHeadingListStart
+%         \resumeProjectHeading
+%           {\textbf{Workshop on Software Design Patterns}}{May 2022}
+%           \resumeItemListStart
+%             \resumeItem{Conducted a software design workshop covering behavioral and creational patterns for undergraduate and postgraduate students. }
+%           \resumeItemListEnd
+        % \vspace{-13pt}
+        % \resumeProjectHeading
+        %   {\textbf{Workshop on Git, Github and Node js}}{May 2018}
+        %   \resumeItemListStart
+        %     \resumeItem{Facilitated a series of workshops for peers, junior year, and sophomore year students as part of the developer student community. It covered version control and node js. }
+        %   \resumeItemListEnd
+    % \resumeSubHeadingListEnd
 
 
 \end{document}
